@@ -1,5 +1,9 @@
 'use strict';
 module.exports = (url, options) => {
+	if (url === '') {
+		return url;	
+	}
+	
 	if (typeof url !== 'string') {
 		throw new TypeError(`Expected \`url\` to be of type \`string\`, got \`${typeof url}\``);
 	}
